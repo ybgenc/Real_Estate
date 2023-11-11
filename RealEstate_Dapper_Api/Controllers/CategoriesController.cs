@@ -26,7 +26,26 @@ namespace RealEstate_Dapper_Api.Controllers
         public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
         {
             _categoryRepository.CreateCategory(createCategoryDto);
-            return Ok("Category added successfully!");
+            return Ok("The category has been successfully added");
         }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            _categoryRepository.DeleteCategory(id);
+            return Ok("The category has been successfully deleted.");
+        }
+        [HttpPut]
+        public async Task<IActionResult>UpdateCategory(UpdateCatagoryDto updateCatagoryDto)
+        {
+            _categoryRepository.UpdateCategory(updateCatagoryDto);
+            return Ok("The category has been successfully updated");
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult>GetCategory(int id)
+        {
+            var value = _categoryRepository.GetCategory(id);
+            return Ok(value);
+        }
+
     }
 }
