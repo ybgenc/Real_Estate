@@ -23,7 +23,7 @@ namespace RealEstate_Dapper_UI.ViewComponents.HomePage
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var jsonDataTips = await responseMessageTips.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultProductDtos>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<Dtos.ProductDtos.ResultProductDto>>(jsonData);
                 var valuesTips = JsonConvert.DeserializeObject<List<ResultTipsAdviceDto>>(jsonDataTips);
 
                 // Set ViewBag.productCoverImages to the last three productCoverImages
