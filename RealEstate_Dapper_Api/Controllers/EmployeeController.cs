@@ -38,7 +38,7 @@ namespace RealEstate_Dapper_Api.Controllers
             _employeeRepository.CreateEmployee(createEmployeeDto);
             return Ok("Employee has been successfully added");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {
             _employeeRepository.DeleteEmployee(id);
