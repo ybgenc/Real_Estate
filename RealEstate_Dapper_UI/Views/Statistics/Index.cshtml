@@ -1,0 +1,191 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Admin/Index.cshtml";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <i class="fa fa-toggle-on fa-3x text-primary me-3"></i>
+                <div class="flex-grow-1">
+                    <p class="mb-2">Active Category</p>
+                    <h6 class="mb-0">@ViewBag.activeCategoryCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <i class="fa fa-toggle-off fa-3x text-primary me-3"></i>
+                <div class="flex-grow-1">
+                    <p class="mb-2">Passive Category</p>
+                    <h6 class="mb-0">@ViewBag.passiveCategoryCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <i class="fa fa-users fa-3x text-primary me-3"></i>
+                <div class="flex-grow-1">
+                    <p class="mb-2">Active Employee</p>
+                    <h6 class="mb-0">@ViewBag.activeEmployeeCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-briefcase fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Employee With Most Listings</p>
+                    <h6 class="mb-0">@ViewBag.employeeNameByMaxProductNumber</h6>
+                </div>
+            </div>
+        </div>
+       
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-map-marker fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Most listings City</p>
+                    <h6 class="mb-0">@ViewBag.cityNameByMaxPrdouctCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-star fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Most listings Category</p>
+                    <h6 class="mb-0">@ViewBag.categoryNameByMaxProductCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-home fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Number of Products</p>
+                    <h6 class="mb-0">@ViewBag.productCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-database fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Number of Category</p>
+                    <h6 class="mb-0">@ViewBag.categoryCount</h6>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-university fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Average Property Price</p>
+                    <h6 class="mb-0">$@ViewBag.averagePrdouctBySale</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-university fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Average Rent Price</p>
+                    <h6 class="mb-0">$@ViewBag.averageProductByRent</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-calendar fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Price Of The Last Listing For Sale</p>
+                    <h6 class="mb-0">$@ViewBag.lastProductPrice</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-calendar fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Price Of The Last Listing For Rent</p>
+                    <h6 class="mb-0">$@ViewBag.lastProductRentPrice</h6>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-share fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Newest Building Year</p>
+                    <h6 class="mb-0">@ViewBag.newestBuildingYear</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-reply fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Oldest building Year</p>
+                    <h6 class="mb-0">@ViewBag.oldestBuildingYear</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-map-pin fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Different Country Number</p>
+                    <h6 class="mb-0">@ViewBag.differentCountryCount</h6>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-xl-3">
+            <div class="bg-light rounded d-flex align-items-center p-4 h-100">
+                <div>
+                    <i class="fa fa-bed fa-3x text-primary me-3"></i>
+                </div>
+                <div>
+                    <p class="mb-2">Average Of Room Number</p>
+                    <h6 class="mb-0">@ViewBag.averageRoomCount</h6>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+

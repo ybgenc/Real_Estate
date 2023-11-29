@@ -27,7 +27,7 @@ namespace RealEstate_Dapper_Api.Controllers
             _aboutUsRepository.CreateAboutUsDetail(createAboutUsDetailDto);
             return Ok("The about us  has been successfully added");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteAboutUsDetail(int id)
         {
             _aboutUsRepository.DeleteAboutUsDetail(id);

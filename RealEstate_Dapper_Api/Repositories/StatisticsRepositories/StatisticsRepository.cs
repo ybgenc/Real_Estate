@@ -32,19 +32,9 @@ namespace RealEstate_Dapper_Api.Repositories.StatisticsRepository
             }
         }
 
-        public int ApartmentCount()
-        {
-            string query = "Select Count(*) From Product where ProductCategory = 2";
-            using (var  connections = _context.CreateConnection())
-            {
-                var values = connections.QueryFirstOrDefault<int>(query);
-                return values;
-            }
-        }
-
         public decimal AverageProductByRent()
         {
-            string query = "Select Avg(ProductPrice) From Product where Type='RENT'";
+            string query = "Select Avg(ProductPrice) From Product where Type like 'RENT'";
             using (var connection = _context.CreateConnection())
             {
                 var values = connection.QueryFirstOrDefault<decimal>(query);
@@ -54,7 +44,7 @@ namespace RealEstate_Dapper_Api.Repositories.StatisticsRepository
 
         public decimal AverageProductBySale()
         {
-            string query = "Select Avg(ProductPrice) From Product where Type='SALE'";
+            string query = "Select Avg(ProductPrice) From Product where Type like 'SALE'";
             using (var connection = _context.CreateConnection())
             {
                 var values = connection.QueryFirstOrDefault<decimal>(query);

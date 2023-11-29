@@ -23,11 +23,6 @@ namespace RealEstate_Dapper_Api.Controllers
         {
             return Ok(_statisticsRepository.ActiveEmployeeCount());
         }
-        [HttpGet("ApartmentCount")]
-        public IActionResult ApartmentCount()
-        {
-            return Ok(_statisticsRepository.ApartmentCount());
-        }
         [HttpGet("AverageProductByRent")]
         public IActionResult AverageProductByRent()
         {
@@ -92,6 +87,11 @@ namespace RealEstate_Dapper_Api.Controllers
         public IActionResult ProductCount()
         {
             return Ok(_statisticsRepository.ProductCount());
+        }
+        [HttpGet("PassiveCategoryCount")]
+        public IActionResult PassiveCategoryCount()
+        {
+            return Ok(_statisticsRepository.PassiveCategoryCount());
         }
     }
 }
