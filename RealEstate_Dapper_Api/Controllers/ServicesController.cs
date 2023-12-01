@@ -28,7 +28,7 @@ namespace RealEstate_Dapper_Api.Controllers
             _servicesRepository.CreateService(createServiceDto);
             return Ok("The service has been successfully added");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteService(int id)
         {
             _servicesRepository.DeleteService(id);

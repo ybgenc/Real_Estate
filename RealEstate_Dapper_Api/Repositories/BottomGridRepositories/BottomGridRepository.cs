@@ -16,7 +16,7 @@ namespace RealEstate_Dapper_Api.Repositories.BottomGridRepositories
         }
         public async void CreateBottomGrid(CreateBottomGridDto createBottomGridDto)
         {
-            string query = "İnsert into BottomGrid(Title,Icon,Description) values (@title,@icon,@description)";
+            string query = "Insert into BottomGrid (Title,Icon,Description) values (@title,@icon,@description)";
             var parameters = new DynamicParameters();
             parameters.Add("@title", createBottomGridDto.Title);
             parameters.Add("@icon", createBottomGridDto.Icon);

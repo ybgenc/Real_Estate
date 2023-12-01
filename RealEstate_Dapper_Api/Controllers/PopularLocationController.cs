@@ -27,7 +27,7 @@ namespace RealEstate_Dapper_Api.Controllers
             _popularLocationRepository.CreatePopularLocation(createPopularLocationDto);
             return Ok("Location has been successfully added");
         }
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePopularLocation(int id)
         {
             _popularLocationRepository.DeletePopularLocation(id);
